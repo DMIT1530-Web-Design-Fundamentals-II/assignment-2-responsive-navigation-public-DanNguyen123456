@@ -7,6 +7,7 @@
     --grey: #3A3A3A;
     --light-grey: #707070;
     --hover-green: #71700D;
+    --green: #B29124;
     --offwhite: #CBC9C9;
     --white: #F2F2F2;
     --main-font: 'Roboto', sans-serif;
@@ -79,7 +80,8 @@ ul>li>a:hover {
 
 
 h1,
-h2 {
+h2,
+h3 {
     font-family: 'CooperHewitt', sans-serif;
     font-weight: 1;
 }
@@ -194,8 +196,8 @@ footer {
 }
 
 p {
-    color: black;
-    font-weight: 400;
+    color: var(--grey);
+    font-weight: 500;
     font-size: 1.4rem;
 }
 
@@ -238,6 +240,64 @@ p {
 }
 
 /*Stuff*/
+.stuff>div>.col>h2 {
+    padding-top: 2rem;
+    font-size: 7rem;
+    line-height: 7rem;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.stuff>div>.col>.svg {
+    filter: invert(36%) sepia(74%) saturate(1182%) hue-rotate(354deg) brightness(89%) contrast(91%);
+    max-width: 3rem;
+    position: relative;
+    height: 100%;
+    left: 4.5rem;
+    top: -8rem;
+}
+
+.stuff>.inner-container {
+    padding: 0;
+}
+
+.stuff>.inner-container>.inner-container>.col:first-child {
+    background-color: var(--white);
+    padding: 1.5rem 1rem 4rem 1rem;
+}
+
+.stuff>.inner-container>.inner-container>.col>img {
+    min-height: 35rem;
+}
+
+.stuff>.inner-container>.inner-container>.col>h3 {
+    color: var(--green);
+    font-size: 3rem;
+    line-height: 3rem;
+    padding-bottom: 1rem;
+}
+
+.stuff>.inner-container>.inner-container>.col>p {
+    color: var(--grey);
+    padding-bottom: 2rem;
+}
+
+.stuff>.inner-container>.inner-container>.col>a {
+    color: var(--grey);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.stuff>.inner-container>.inner-container>.col>a:hover {
+    color: var(--hover-green);
+}
+
+.stuff>.inner-container>.inner-container>.col:nth-child(2) {
+    position: relative;
+    top: -3rem;
+    padding: 1rem;
+}
 
 /*Video Blog*/
 .video {
