@@ -261,39 +261,39 @@ p {
     padding: 0;
 }
 
-.stuff>.inner-container>.inner-container>.col:first-child {
+.stuff>.inner-container>.wide-flex>.inner-container>.col:first-child {
     background-color: var(--white);
     padding: 1.5rem 1rem 4rem 1rem;
 }
 
-.stuff>.inner-container>.inner-container>.col>img {
+.stuff>.inner-container>.wide-flex>.inner-container>.col>img {
     min-height: 35rem;
 }
 
-.stuff>.inner-container>.inner-container>.col>h3 {
+.stuff>.inner-container>.wide-flex>.inner-container>.col>h3 {
     color: var(--green);
     font-size: 3rem;
     line-height: 3rem;
     padding-bottom: 1rem;
 }
 
-.stuff>.inner-container>.inner-container>.col>p {
+.stuff>.inner-container>.wide-flex>.inner-container>.col>p {
     color: var(--grey);
     padding-bottom: 2rem;
 }
 
-.stuff>.inner-container>.inner-container>.col>a {
+.stuff>.inner-container>.wide-flex>.inner-container>.col>a {
     color: var(--grey);
     font-size: 1.5rem;
     text-transform: uppercase;
     text-decoration: underline;
 }
 
-.stuff>.inner-container>.inner-container>.col>a:hover {
+.stuff>.inner-container>.wide-flex>.inner-container>.col>a:hover {
     color: var(--hover-green);
 }
 
-.stuff>.inner-container>.inner-container>.col:nth-child(2) {
+.stuff>.inner-container>.wide-flex>.inner-container>.col:nth-child(2) {
     position: relative;
     top: -3rem;
     padding: 1rem;
@@ -330,4 +330,193 @@ p {
 
 .video>.inner-container {
     padding: 0;
+}
+
+.arrow {
+    left: -9999px;
+    position: absolute;
+    top: -9999px;
+}
+
+/* DESKTOP VIEW */
+@media screen and (min-width: 720px) {
+
+    /* header */
+    .wide-flex {
+        display: flex;
+        align-items: space-between;
+    }
+
+    header div.inner-container {
+        max-width: 60rem;
+    }
+
+    header div.inner-container {
+        flex: 1 0 auto;
+    }
+
+    .topbar .menu-icon {
+        display: none;
+    }
+
+    .topbar {
+        display: flex;
+        justify-content: flex-start;
+        position: static;
+        overflow: visible;
+        opacity: 1;
+    }
+
+    .show-nav {
+        max-height: 0;
+    }
+
+    .main-menu {
+        display: flex;
+        justify-content: flex-end;
+        margin: 0;
+        margin-left: auto;
+    }
+
+    .first-link {
+        display: flex;
+    }
+
+    .arrow {
+        padding-left: .6rem;
+        position: relative;
+        left: 0;
+        top: 0;
+        max-width: 2rem;
+        filter: invert(100%);
+    }
+
+    .topbar .second-tier {
+        min-width: 100%;
+        margin: 0;
+        visibility: hidden;
+        display: inline-block;
+        text-align: center;
+        background-color: var(--grey);
+    }
+
+    .topbar .second-tier li {
+        padding: .5rem;
+    }
+
+    .main-menu li:hover>.second-tier {
+        visibility: visible;
+    }
+
+    /* main */
+    .good-food>div>.col>h2 {
+        font-size: 5rem;
+    }
+
+    .good-food>div>.col>h2:nth-child(2) {
+        margin-top: -2.5rem;
+    }
+
+    .good-food>.inner-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .good-food>.inner-container>.col:first-child {
+        width: 40%;
+    }
+
+    .good-food>div>.col>img {
+        max-width: 100%;
+    }
+
+    .local-travel>.inner-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+    .local-travel>div>.col>img {
+        position: absolute;
+        right: 5rem;
+    }
+
+    .local-travel {
+        padding: 1rem;
+        margin-bottom: 18rem;
+    }
+
+    .stuff>div>.col>h2 {
+        padding-left: 5rem;
+        text-align: left;
+    }
+
+    .good-food>.inner-container>.inner-container {
+        display: block;
+    }
+
+    .stuff>.inner-container>.wide-flex {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .stuff>.inner-container>.wide-flex>.inner-container {
+        flex: 1;
+    }
+
+    .stuff>.inner-container>.wide-flex>.inner-container>.col>img {
+        min-width: 25rem;
+    }
+
+    .video {
+        width: 70%;
+    }
+
+    .video>.inner-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .video img {
+        min-width: 30rem;
+        position: absolute;
+        right: 1rem;
+        top: 247rem;
+    }
+
+    .video p {
+        padding-left: 5rem;
+    }
+
+    .video .button {
+        margin-right: auto;
+        margin-left: 0;
+    }
+
+    .video h2 {
+        padding-left: 3rem;
+    }
+
+    .video .col:first-child {
+        width: 70%;
+    }
+
+    .footer-menu {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .footer-menu ul {
+        padding-bottom: 0;
+    }
+
+    .footer-menu>li {
+        padding-right: 2rem;
+    }
+
+    .icon-list>div {
+        padding: .4rem;
+    }
+
 }
