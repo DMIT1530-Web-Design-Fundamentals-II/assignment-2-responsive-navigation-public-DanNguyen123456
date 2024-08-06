@@ -1,0 +1,273 @@
+@font-face {
+    font-family: 'CooperHewitt';
+    src: url('/fonts/CooperHewitt-Heavy.ttf');
+}
+
+:root {
+    --grey: #3A3A3A;
+    --light-grey: #707070;
+    --hover-green: #71700D;
+    --offwhite: #CBC9C9;
+    --white: #F2F2F2;
+    --main-font: 'Roboto', sans-serif;
+}
+
+/*Universal Styles*/
+
+body {
+    font-family: var(--main-font);
+    color: var(--grey);
+}
+
+.sr-only {
+    left: -9999px;
+    position: absolute;
+    top: -9999px;
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.inner-container {
+    margin: auto;
+    max-width: 60rem;
+    padding: 1rem;
+}
+
+.col {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Header */
+header .inner-container {
+    padding: unset;
+}
+
+header {
+    background-color: var(--grey);
+    padding: .5rem 1rem .5rem 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul>li {
+    margin-top: .4rem;
+}
+
+ul>li>a {
+    text-decoration: underline;
+}
+
+ul>li>a:hover {
+    color: var(--hover-green);
+}
+
+
+h1,
+h2 {
+    font-family: 'CooperHewitt', sans-serif;
+    font-weight: 1;
+}
+
+.first-link {
+    font-weight: 800;
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+.menu-icon {
+    cursor: pointer;
+    filter: invert(100%);
+}
+
+.menu-icon>img {
+    min-width: 1.5rem;
+}
+
+.menu-icon:hover {
+    filter: invert(39%) sepia(10%) saturate(5197%) hue-rotate(28deg) brightness(98%) contrast(90%);
+}
+
+.topbar {
+    width: 100%;
+    background-color: var(--dk-navy);
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    text-align: right;
+}
+
+.show-nav {
+    max-height: unset;
+    opacity: 1;
+    transition: opacity 1s;
+    overflow: visible;
+}
+
+/* Footer */
+footer {
+    background-color: var(--grey);
+}
+
+.footer-menu {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 5rem;
+}
+
+.footer-menu>li>ul {
+    padding: 0;
+    list-style-type: none;
+    padding-bottom: 1rem;
+}
+
+.footer-menu>li>ul>li {
+    margin: 0;
+}
+
+.footer-menu>li>ul>li>a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--offwhite)
+}
+
+.footer-menu>li>ul>li>a:hover {
+    color: var(--hover-green)
+}
+
+.icon-list {
+    display: flex;
+    flex-direction: row;
+}
+
+.icon-list>div {
+    padding: .15rem;
+}
+
+.icon-list>.menu-icon>img {
+    filter: invert(10%);
+    min-width: 1.7rem;
+}
+
+.button {
+    background: var(--grey);
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    display: inline-block;
+    padding: 1rem;
+    border-radius: 5rem;
+    margin: 1rem 0;
+    min-width: 13rem;
+    max-width: 14rem;
+    text-align: center;
+}
+
+
+/* MOBILE */
+
+/*Good food*/
+.good-food>div>.col>h2 {
+    font-size: 7rem;
+}
+
+.good-food>div>.col>h2:nth-child(2) {
+    color: var(--light-grey);
+    margin-top: -4rem;
+    padding-left: 5rem;
+}
+
+p {
+    color: black;
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+
+.good-food>div>.col>img:nth-child(1) {
+    max-width: 80%;
+    margin-left: auto;
+}
+
+.good-food>div>.col>img:nth-child(2) {
+    max-width: 70%;
+    position: relative;
+    bottom: 2rem;
+}
+
+/*Local Travel*/
+.local-travel {
+    background-color: var(--white)
+}
+
+.local-travel>div>.col>h2 {
+    font-size: 7rem;
+    color: var(--hover-green);
+}
+
+.local-travel>div>.col>h2:nth-child(2) {
+    color: var(--light-grey);
+    margin-top: -4rem;
+    padding-left: 5rem;
+}
+
+.local-travel>div>.col>.button {
+    margin-top: -1rem;
+    margin-left: auto;
+}
+
+.local-travel>div>.col>img {
+    max-width: 80%;
+    margin-left: auto;
+    padding-bottom: 2rem;
+}
+
+/*Stuff*/
+
+/*Video Blog*/
+.video {
+    background-color: var(--grey);
+    color: white;
+    margin: 1rem 1rem 3rem 1rem;
+}
+
+.video>div>.col>h2 {
+    padding-top: 2rem;
+    font-size: 7rem;
+    line-height: 7rem;
+}
+
+.video>div>.col>p {
+    color: white;
+    padding-top: 3rem;
+}
+
+.video>div>.col>.button {
+    background-color: var(--white);
+    color: var(--light-grey);
+    margin-left: auto;
+    margin-bottom: 5rem;
+}
+
+.video>div>.col:first-child {
+    padding: 1rem;
+}
+
+.video>.inner-container {
+    padding: 0;
+}
